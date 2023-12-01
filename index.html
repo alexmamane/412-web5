@@ -2,194 +2,443 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>case study</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200&display=swap" rel="stylesheet">
-</head>
+<title>am ortfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Golos+Text&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Arsenal:wght@700&family=Golos+Text&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
 
 <style>
 body {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 17px;
-  color: #0a0c20;
-  background-color: #0a0c20;
-  margin: 0;
+    background-color: rgb(0, 0, 0); 
+    color: #ff7bc8;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Golos Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: fadeInBody 1s ease-in-out forwards; 
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
 }
 header {
-  width: 100%;
-  height: 70px;
-  text-align: center;
-  background-color: #0a0c20;
-  color: white;
-  padding: 15px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 35px 0;
+    animation: fadeIn 1s ease-in-out;
+    animation: fadeInHeader 1s ease-in-out;
 }
+
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animation {
+        padding: 20%;
+        color: hotpink;
+        font-family: 'Forum', serif;      
+        font-size: 90px;
+        font-weight: bold;        
+        text-align: left;
+        overflow: hidden;
+        }
+
+        .animation span {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeInWords 1.5s ease-out forwards;
+        }
+
+        .animation span:nth-child(1) {
+            transform: translateX(-100%);
+            animation-delay: 0.5s; 
+        }
+
+        .animation span:nth-child(3) {
+            transform: translateX(100%); 
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeInWords {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) translateY(0);
+            }
+        }
+
 nav {
-  color: #ffffff;
-  width: 10%;
-  height: 30px;
-  padding-top: 15px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+
+    nav a {
+        text-decoration: none; 
+        color: #ff7bc8; 
+        margin: 0 10px; 
+        font-size: 17px; 
+    }
+
+.logo {
+position: absolute;   top: 0px; 
+    left: 0px; 
+    animation: fadeIn 1s ease-in-out;
 }
-nav ul {
-  margin: 0;
-  text-align: center;
-  padding: 20;
+.logo img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: spinLogoX 3s linear infinite; 
+  }
+
+  @keyframes spinLogoX {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+.about {
+    font-family: 'Forum', serif;      
+    color: #ffffff;
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: transparent; 
+    animation: slideIn 1s ease-in-out;
+
 }
-nav li a {
-  text-decoration: none;
-  color: #ffffff;
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
-main {
-  padding: 20px;
-  max-width: 800px; 
-  margin: 0 auto; 
+.about {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 4%;
+    width: 100%;
+    overflow: hidden; 
+      
+    }
+    .text {
+        background-color: rgba(255, 199, 236, 0.559);
+        font-size: 22px;
+        float: left;
+        width: 50%; 
+        height: auto;
+    }
+    .about a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffccf3;
 }
-article {
-  margin-bottom: 30px;
+    .about .text p::first-letter {
+    font-size: 48px; 
+    color: #ffffff; 
+    font-weight: bold; 
 }
-.text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  background-color: #afb5c3;
-  width: 100%;
-}
-.text img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 5px;
-  transition: transform 0.3s;
-}
-.text img:hover {
-  transform: scale(1.1);
-}
-h2,
-h3,
-h4 {
-  color: #ffffff;
-  text-align: center;
-}
-ul.list {
-  list-style-type: none;
-  padding: 0;
-}
-.list li {
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 5px;
-}
-footer {
-  text-align: center;
-  background-color: #cdcedd;
-  padding: 15px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+.about .text p{
+border: 1.5px solid #ccc;
+padding: 25px;
+margin: 20px;
+border-radius: 5px;       
+        }
+    .image {
+     padding-top: 1%;
+      float: right;
+      width: 46%; 
+    }
+
+    .image img {
+      width: 100%; 
+      height: auto; 
+    }
+    .interests-section {
+       padding-top: 26%;
+        text-align: center;
+    margin: 50px 0;
 }
 
-#footer-text {
-  margin: 0;
+#text-overlay1,
+        #text-overlay2 {
+            font-family: 'Forum', serif;      
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        #text-overlay1 {
+            font-family: 'Sacramento', cursive;
+            margin-left: 810px;
+            top: 311%;
+            font-size: 90px;
+        }
+
+        #text-overlay2 {
+            margin-left: 840px;
+            top: 483%;
+            font-size: 19px;
+        }
+
+.interests-images {
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
 }
-</style>
- 
-</style>
-    <header id="title">
-        <h1>CASE STUDY</h1> 
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Back to Web5</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <article>
-            <h2>Just Do It App</h2>
-            <div class="text">
-                <img src="  ../case-study/img/Mamane_documentation.pdf">
-
-                <div>
-                    <h3>Project Goal</h3>
-
-                    <p>This project was meant to create a simple to do list app for teachers. This app will allow the users to...</p>
-                    <ul class="list">
-                        <li>- Create an account using a username</li>
-                        <li>- Log in or identify ourselves in the system with our username</li>
-                        <li>- Display the list of our individual “to do” tasks</li>
-                        <li>- Display a list of our 10 last completed tasks</li>
-                        <li>- Provide a simple text field to add a new task to the list</li>
-                       <li>- Provide a checkbox or a button to be able to mark a pending task as complete</li> 
-                      </ul>
-                    
-                </div>
-            </div>
-        </article>
-
-        <article>
-            <div class="text">
-                <img src="../case-study/img/JustDoIt-Wireframes.jpg">
-                <div>
-                    <h3>Challenges</h3>
-                    <ul class="list">
-                  <li>- Intergeating the database</li>
-                  <li>- Using the exacte words</li>
-                    </ul> 
-            
-                <p>Sometimes we spelled words differently like words with an (s) and sometimes w without so it took us forever to finally realize and then it finally connected to the db and would show data</p></div>
-            </div>    
-        </article>
-
-        <article>
-            <div class="text">
-                <img src="../case-study/img/moodboard.png">
-                <div>
-                    <h3>Moodboard</h3>
-                    
-                <p> We included:
-                  <ul class="list">
-                    <li>- a color scheme </li>
-                    <li>- typographic/font choices</li>
-                    <li>- photo / illustration style</li>
-                    <li>- cool / fun patterns</li>
-                          </p>
-                </ul>
-                </div>
-            </div>
-        </article>
-
-        <article id="outcome">
-  
-            <div class="text">
-                <img src="../case-study/img/app.png">
-                <div>
-                    <h3>outcome</h3>
-                    <p>Maya and I sent the app to many many of our friends to add tasks. I’ve gotten a lot of feedback from my friends and they all thought the app was very cool and useful. p>
-                </div>
-            </div>
-        </article>
-
-        <article id="introduction">
- 
-            <div class="text">
-                <img src="../case-study/img/final.png">
-                <div>
-                  <h3>Images</h3>
-                    </div>
-                </div>
-        </article>
-    </main>
+.interests-images img {
+    width: 200px; 
+    height: auto;
+    margin: 0 10px; 
+}
 
 
-    <footer id="copyright">
-        <p id="footer-text">Alexandra Mamane © Copyright 2023</p>
-    </footer>
+#projects .project-box {
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto;
+    text-align: center; /
+}
 
-</body>
-</html>
+#projects .project-box img {
+    width: 100%;
+    height: auto;
+}
 
+#projects {
+    padding-top: 15%;
+   padding-bottom: 5%;
+   color: #ffffff;
+    font-size: 13px;
+    max-width: 1250px;
+    margin: 0 auto;
+    background-color: transparent;
+    overflow: hidden;
+    animation: slideIn 1s ease-in-out;
+}
 
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#projects a {
+    color: #ffffff;
+    text-decoration: none;
+}
+#projects h2 a {
+    color: #ff7bc8;
+    padding: 5%;
+    text-decoration: none;
+}
+
+#projects .project-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#projects .project-box h3 {
+    margin-bottom: 10px;
+}
+
+.project-box:hover {
     
+    transform: scale(1.1);
+}
+#gradient-line {
+position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 105%;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, #ff1d92, #ff70ba, #ffabd6,#ff70ba, #ff1d92,#ff70ba);
+  background-size: 200% 100%; 
+  animation: moveGradient 2s linear infinite;
+}
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+footer {
+  background-color: #0f0f0f; 
+  color: #ff7bc8;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.footer-column a {
+  color: #ff7bc8;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.copyright {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+
+}
+    </style>
+</style>
+</head>
+<header>
+    <h1></h1>
+</header>
+
+<header>
+<nav>
+    <a href="../portfolio/index.html">Homepage</a>
+    <a href="../portfolio/about.html">About</a>
+    <a href="#projects">Projects</a>
+</nav>
+</header>
+
+<body>
+    
+    <div class="animation">
+        <span>ALEXANDRA</span><br>
+        <span>MAMANE</span><br>
+    </div>
+    
+    <div id="gradient-line"></div>
+ 
+    <div class="logo">
+        <img src="../img/monogram.tiff" alt="Your Logo">
+        <div id="text-overlay1">Me!</div>
+        <div id="text-overlay2">Graphic and Web Designer</div>
+    </div>
+    
+    <div class="about">
+        <div class="text">
+          <p>Heyheyyy!! My name is Alexandra and im 20 years old. You can call me Alex though ;)
+            Currently, I’m in my 3rd year of micromedia at Vanier College studying to become a Graphic Designer! I chose this field because of my passion for art and design. I'm passionate about drawing, designing, video editing and creating social media...
+            <a class="read-more-link" href="../portfolio/about.html">Read more</a></p>
+        </div>
+        <div class="image">
+            <a href="../portfolio/about.html">
+            <img src="../img/about-me.jpg" alt="Your Image">
+        </a>
+        </div>    
+      </div>
+
+      <div class="container" id="projects">
+        <h2><a href="../portfolio/projects.html">Project Preview</a></h2>
+        <div class="project-preview">
+            <div class="project-box">
+                <a href="../portfolio/design.html">
+                <h3>Design History Project</h3>
+                <img src="../img/History.jpg" alt="Project 1">
+            </a>
+            </div>
+            <div class="project-box">
+                <a href="../portfolio/logo.html">
+                <h3>Logo</h3>
+                <img src="../img/monogram.tiff" alt="Project 2">
+            </a>
+            </div>
+            <div class="project-box">
+                <a href="../portfolio/game.html">
+                <h3>Web3 Game</h3>
+                <img src="/web3/project3/branding/press_kit/press_kit_images/game-play.png" alt="Project 3">
+            </a>
+            </div>
+            <div class="project-box">
+                <a href="../case-study/explanations.html">
+                    <h3>Case study</h3>
+                    <img src="../img/case.png" alt="Project 4">
+                </a>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-section">
+        <h3>Like what you see? Get in touch with me!</h3>
+    </div>
+
+    <div class="footer-section">
+        <div class="footer-column">
+            <p>Email: <a href="mailto:alexmamane1@gmail.com">alexmamane1@gmail.com</a>
+                  Insta:<a href="https://instagram.com/alexmamanee?igshid=M2RkZGJiMzhjOQ%3D%3D&utm_source=qr">@alexmamanee</a></p>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <div class="copyright">
+            <p>&copy; 2023 Alexandra</p>
+        </div>
+    </div>
+</footer>
+ </body>
+</html>
